@@ -1,15 +1,18 @@
+// import Ironman from "./components/Ironman";
+// import Hulk from "./components/Hulk";
+// import BlackWidow from "./components/BlackWidow";
+
+import { Ironman, Hulk, BlackWidow, sample } from "./components/Avengers";
+
 function App() {
-  const intro = "Hello reactjs";
   return (
     <div>
-      <h1>{intro}</h1>
+      <p>{sample}</p>
+      <Ironman />
+      <Hulk />
+      <BlackWidow />
     </div>
   );
-  // return React.createElement(
-  //   "div",
-  //   null,
-  //   React.createElement("h1", null, intro)
-  // );
 }
 
 export default App;
