@@ -1,23 +1,21 @@
-function BlackWidow() {
-  return <div>Black Widow</div>;
+function BlackWidow({ name }) {
+  return <div>{name}</div>;
 }
 
-function Hulk() {
-  return <div>Hulk</div>;
+function Hulk(props) {
+  const { name } = props;
+  return <div>{name}</div>;
 }
 
-function Ironman() {
-  return <div>Iron man</div>;
-}
+function Ironman({ IronManObject }) {
+  console.log(IronManObject);
 
-function Avenge(params) {
-  return <div>This is default export</div>;
+  return (
+    <div>
+      {IronManObject.name} - {IronManObject.realName}
+    </div>
+  );
 }
-
-const MyString = "Hello Its exported string";
 
 // Muliple Export
-export { Ironman, BlackWidow, Hulk, MyString };
-
-// Default Export
-export default Avenge;
+export { Ironman, BlackWidow, Hulk };

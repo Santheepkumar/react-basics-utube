@@ -1,23 +1,16 @@
-// import Ironman from "./components/Ironman";
-// import Hulk from "./components/Hulk";
-// import BlackWidow from "./components/BlackWidow";
+import { Ironman, BlackWidow, Hulk } from "./components/Avengers";
 
-// Default and Multiple Imports
-import Avenge, {
-  Ironman,
-  BlackWidow,
-  Hulk,
-  MyString,
-} from "./components/Avengers";
+const IronManObject = {
+  name: "Iron man",
+  realName: "RDJ",
+};
 
 function App() {
   return (
     <div>
-      <h1>{MyString}</h1>
-      <Ironman />
-      <Hulk />
-      <BlackWidow />
-      <Avenge />
+      <Ironman IronManObject={IronManObject} />
+      <Hulk name={"I am Hulk"} />
+      <BlackWidow name={"I am Black Widow"} />
     </div>
   );
 }
