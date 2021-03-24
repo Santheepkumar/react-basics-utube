@@ -1,9 +1,11 @@
-import Counter from "./components/Counter";
+// import Counter from "./components/Counter";
+import Table from "./components/Table";
 
 function App() {
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
+      <Table />
     </div>
   );
 }
