@@ -1,13 +1,20 @@
-// import Counter from "./components/Counter";
-import Table from "./components/Table";
-import Memo from "./components/Memo";
+// import useReact from "./hooks/useReact";
+import MyInput from "./components/MyInput";
 
 function App() {
+  // const { useState, useEffect } = useReact();
+  // const [state, setstate] = useState("Santheep");
+
+  // console.log(state);
+  // useEffect(() => {
+  //   setstate("Honey");
+  // }, []);
+
   return (
     <div>
-      {/* <Counter /> */}
-      {/* <Table /> */}
-      <Memo />
+      {/* <h1>{state}</h1> */}
+
+      <MyInput />
     </div>
   );
 }
