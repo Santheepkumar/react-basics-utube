@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
+import { userContext } from "./UserContext";
 
 function App() {
+  const [user, setUser] = useState({});
   return (
     <Router>
       <div>
@@ -21,14 +24,17 @@ function App() {
         <hr />
 
         <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
+          <userContext.Provider value={[user, setUser]}>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='/dashboard'>
+              <Dashboard />
+            </Route>
+          </userContext.Provider>
+
           <Route path='/about/:id'>
             <About />
-          </Route>
-          <Route path='/dashboard'>
-            <Dashboard />
           </Route>
         </Switch>
       </div>
