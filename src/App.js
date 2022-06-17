@@ -1,9 +1,11 @@
+import React from "react";
+
 // State and Rendering
 // useTransition
 // useTransition cons
 // useDeferredValue
 
-import React from "react";
+// useTransition code
 
 // function App() {
 //   const [input, setInput] = React.useState("");
@@ -48,6 +50,8 @@ import React from "react";
 // }
 
 // export default App;
+
+// useDeferredValue code
 
 function App() {
   const [input, setInput] = React.useState("");
